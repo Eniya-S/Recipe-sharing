@@ -1,0 +1,102 @@
+/* Container */
+.add-blog-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.add-blog-container h1 {
+  color: #1A4D2E;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* Form */
+.blog-form .form-group {
+  margin-bottom: 20px;
+}
+
+.blog-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #333;
+}
+
+.blog-form input[type="text"],
+.blog-form input[type="file"],
+.blog-form textarea {
+  width: 100%;
+  padding: 10px;
+  background: #dfeee6;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.blog-form textarea {
+  min-height: 200px;
+  resize: vertical;
+}
+
+/* Image Preview */
+.preview-image {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Buttons */
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.publish-btn {
+  background-color: #1A4D2E;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.publish-btn:hover {
+  background-color: #166135;
+}
+
+.draft-btn {
+  background-color: #ccc;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.draft-btn:hover {
+  background-color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .form-buttons button {
+    width: 100%;
+  }
+}

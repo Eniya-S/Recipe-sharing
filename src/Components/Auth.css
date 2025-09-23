@@ -1,0 +1,76 @@
+/* Auth Forms */
+.auth-container {
+  background: var(--surface);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  max-width: 400px;
+  margin: 60px auto;
+}
+
+.auth-container h2 {
+  color: var(--text-900);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-container input,
+.auth-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid var(--sage-200);
+  border-radius: 10px;
+}
+
+.auth-container input:focus,
+.auth-container textarea:focus {
+  border-color: var(--teal-500);
+  box-shadow: 0 0 6px var(--mint-300);
+  outline: none;
+}
+
+.auth-btn {
+  width: 100%;
+  background-color: var(--teal-500);
+  color: var(--surface);
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-btn:hover {
+  background-color: var(--teal-700);
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.auth-switch a {
+  color: var(--teal-500);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+/* Home */
+.home-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.home-container h1 {
+  color: var(--teal-700);
+}
+
+.home-container p {
+  color: var(--text-700);
+}

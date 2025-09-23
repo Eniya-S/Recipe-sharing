@@ -1,0 +1,176 @@
+:root {
+  --bg: #f6f4ef;           
+  --surface: #ffffff;      
+  --teal-800: #1a4d2e;     
+  --teal-500: #2e7d5b;     
+  --mint-300: #a8d5c2;     
+  --sage-200: #dfeee6;     
+  --text-900: #1f2a24;     
+  --text-700: #38423d;    
+
+  --radius-xl: 18px;
+  --shadow-1: 0 8px 24px rgba(0,0,0,0.08);
+  --shadow-2: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text-700);
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 0 1.5rem; 
+}
+
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 22px;
+  align-items: center;
+  padding: 40px 0 22px;
+}
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; padding-top: 24px; }
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  color: var(--teal-800);
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.08;
+}
+
+.hero p { margin: 0 0 18px; }
+
+.searchbar {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.searchbar input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.08);
+  outline: none;
+  background: #fff;
+}
+
+.primary-btn {
+  border: none;
+  border-radius: 999px;
+  background: var(--teal-500);
+  color: white;
+  padding: 10px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-1);
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-2);
+}
+
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--teal-800);
+  text-align: left;
+}
+
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+.how-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.categories-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));text-align: center; }
+.trending-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.recipes { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.blogs { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.reviews { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+@media (max-width: 980px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+
+
+.step, .blog-card {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--shadow-1);
+  transition: transform 0.2s ease;
+}
+
+.category-card {
+  background: var(--mint-300);
+  color: var(--text-900);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--shadow-1);
+  transition: transform 0.2s ease;  
+}
+.step:hover, .category-card:hover, .blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card h3 {
+  margin: 0 0 0.5rem;
+  color: var(--text-900);
+  font-weight: 700;
+}
+
+.blog-card p {
+  margin: 0 0 1rem;
+  color: var(--text-700);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 160px;   /* or 200px for popular recipes if you want */
+  object-fit: cover;
+  border-radius: 12px 12px 0 0; /* rounded top corners to match card */
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* ===================== */
+/* Buttons inside blogs */
+.blog-card button {
+  background-color: var(--teal-800);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.blog-card button:hover {
+  background-color: #4F6F52;
+}
+
+/* ===================== */
+/* Footer */
+footer {
+  background-color: #1A4D2E;
+  color: #F5EFE6;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
